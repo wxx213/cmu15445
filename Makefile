@@ -3,7 +3,7 @@ PWD = $(shell pwd)
 
 build: image
 	docker run -it --rm -v $(PWD):/tmp/cmu15445 $(IMAGE) bash -c \
-	"cd /tmp/cmu15445 && rm -rf build && mkdir build && cd build && cmake .. && make"
+	"cd /tmp/cmu15445 && mkdir -p build && cd build && cmake .. && make"
 
 test: image
 	docker run -it --rm -v $(PWD):/tmp/cmu15445 $(IMAGE) bash -c \

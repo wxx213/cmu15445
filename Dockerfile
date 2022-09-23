@@ -17,3 +17,5 @@ RUN apt-get -y update && \
       pkg-config \
       valgrind \
       zlib1g-dev
+
+RUN git clone https://github.com/google/googletest.git /tmp/googletest
